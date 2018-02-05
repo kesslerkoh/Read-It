@@ -69,6 +69,8 @@ function add (token, comment) {
       parentDeleted: false
     }
 
+    console.log('new comment added: ' + JSON.stringify(comment))
+    console.log('new comment added: ' + JSON.stringify(comments[comment.id]))
     posts.incrementCommentCounter(token, comment.parentId, 1)
     res(comments[comment.id])
   })

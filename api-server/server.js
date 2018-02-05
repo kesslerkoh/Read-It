@@ -275,16 +275,16 @@ app.put('/comments/:id', bodyParser.json(), (req, res) => {
 })
 
 app.post('/comments', bodyParser.json(), (req, res) => {
-    comments.add(req.token, req.body)
-      .then(
-          (data) => res.send(data),
-          (error) => {
-              console.error(error)
-              res.status(500).send({
-                  error: 'There was an error.'
-              })
-          }
-      )
+  comments.add(req.token, req.body)
+    .then(
+        (data) => res.send(data),
+        (error) => {
+            console.error(error)
+            res.status(500).send({
+                error: 'There was an error.'
+            })
+        }
+    )
 })
 
 app.post('/comments/:id', bodyParser.json(), (req, res) => {

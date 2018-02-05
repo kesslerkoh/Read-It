@@ -1,0 +1,8 @@
+.category-list {
+  text-align: left;
+  position: absolute;
+}
+
+.selected-category {
+  font-weight: 800;
+}

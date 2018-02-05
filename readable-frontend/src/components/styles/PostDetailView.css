@@ -1,0 +1,21 @@
+.post-main-content {
+  width: 70%;
+  margin: auto;
+}
+
+.post-author {
+  font-size: 15px;
+}
+
+.post-content {
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 60%;
+  text-align: left;
+  border: 1px solid #222222;
+}
+
+.post-vote-score {
+  padding: 10px 0 0 0;
+}

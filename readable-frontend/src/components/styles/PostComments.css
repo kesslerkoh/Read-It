@@ -1,0 +1,42 @@
+.main-section {
+  border-top: 1px solid #222;
+  margin-top: 10px;
+  padding-left: 30%;
+  padding-right: 30%;
+  width: 40%;
+
+  text-align: left;
+}
+
+.main-section-title {
+  text-decoration: underline;
+}
+
+.comment-author {
+  font-size: 16px;
+}
+
+.comment-container {
+  padding: 3px 0;
+}
+
+.comment-container:first-child {
+  padding-top: 0;
+}
+
+.comment-body {
+  padding-left: 5%;
+  font-size: 14px;
+}
+
+.vote-button, .vote-score {
+  float: right;
+}
+
+.vote-score {
+  margin-right: 5px;
+}
+
+.comment-container a {
+  margin-right: 5px;
+}
