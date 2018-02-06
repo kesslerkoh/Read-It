@@ -3,7 +3,7 @@ import './styles/PostSummaryView.css'
 
 class PostSummaryView extends Component {
   render() {
-    const { title, author, body, voteScore } = this.props
+    const { title, author, body, voteScore, commentCount } = this.props
     return (
       <div className='post-summary-entry'>
         <p className='post-summary-title'>
@@ -19,6 +19,10 @@ class PostSummaryView extends Component {
         <p>
           <span>Vote score: </span>
           { voteScore }
+        </p>
+        <p>
+          <span>Comment count: </span>
+          { commentCount }
         </p>
       </div>
     )

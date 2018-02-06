@@ -45,7 +45,7 @@ const defaultPost = {
   author: 'thingone default user',
   category: 'redux',
   voteScore: 8,
-  deleted: false,
+  deleted: true,
   commentCount: 0
 }
 
@@ -59,11 +59,19 @@ function posts (state = defaultData, action) {
         [action.post.id]: action.post
       }
     case DELETE_POST:
-      return state.filter(post =>
-        post.id !== action.id
-      )
+      return state.filter(post => (
+        post.id !== action.post.id
+      ))
     case REARRANGE_POSTS:
       return action.posts
+    case VOTE_ON_POST:
+      return state.map(post => {
+        if (post.id === action.post.id) {
+          return action.post
+        }
+
+        return post
+      })
     default:
       return state
   }

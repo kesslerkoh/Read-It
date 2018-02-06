@@ -93,9 +93,13 @@ class PostOptions extends Component {
           <button onClick={this.deletePost}>
             Delete post
           </button>
-          <button onClick={this.toggleCommentsModal}>
-            Add comment
-          </button>
+          {
+            !this.props.isSummaryView && (
+              <button onClick={this.toggleCommentsModal}>
+                Add comment
+              </button>
+            )
+          }
         </div>
         <Modal
           isOpen={addCommentModalOpen}

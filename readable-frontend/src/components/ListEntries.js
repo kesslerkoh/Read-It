@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PostSummaryView from './PostSummaryView.js'
+import PostOptions from './PostOptions.js'
 // import { getPosts } from '../utils/apis.js'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -64,14 +65,18 @@ class ListEntries extends Component {
             posts.map((post) => {
               let toValue = '/' + post.category + '/' + post.id
               return (
-                <Link className='post-entry' to={ toValue } key={ post.id }>
-                  <PostSummaryView
-                    title = { post.title }
-                    author = { post.author }
-                    body = { post.body }
-                    voteScore = { post.voteScore }
-                  />
-                </Link>
+                <div className='post-entry' key={ post.id }>
+                  <Link to={ toValue }>
+                    <PostSummaryView
+                      title = { post.title }
+                      author = { post.author }
+                      body = { post.body }
+                      voteScore = { post.voteScore }
+                      commentCount = { post.commentCount }
+                    />
+                  </Link>
+                  <PostOptions postId={ post.id } isSummaryView={ true }/>
+                </div>
               )
             })
           }

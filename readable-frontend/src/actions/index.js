@@ -51,10 +51,10 @@ export function addPost (post) {
   }
 }
 
-export function deletePostAction (id) {
+export function deletePostAction (post) {
   return {
     type: DELETE_POST,
-    id
+    post
   }
 }
 
